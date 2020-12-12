@@ -114,12 +114,6 @@ class EarthquakeInfo : Fragment() {
 
           //get Time and convert
 
-
-
-
-
-
-
           var date =earthquake.pro.time
           val calendar = Calendar.getInstance()
          calendar.time = Date(date)
@@ -141,23 +135,12 @@ class EarthquakeInfo : Fragment() {
     }
     inner class EarthquakeAdapter(var earthquakes: List<Earthquake>) :
         RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-
-
-
-
-
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
             var view: View
             view = layoutInflater.inflate(
                 R.layout.earthquake_list,
                 parent, false
             )
-
-
-
-
-
-
 
             return EarthquakeHolder(view)
 
@@ -172,19 +155,11 @@ class EarthquakeInfo : Fragment() {
 
         }
 
-
-
-
         override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
 
             val earthquake=earthquakes[position]
             if(holder is EarthquakeHolder)
                 holder.bind(earthquake)
-
-
-
-
-
 
 
         }
