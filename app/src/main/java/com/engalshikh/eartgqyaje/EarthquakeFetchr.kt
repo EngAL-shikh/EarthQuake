@@ -13,7 +13,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory
 
 class EarthquakeFetchr {
     lateinit var  eathquakapi:EarthquakeApi
- lateinit var earthquakeApi: EarthquakeApi
+
     init {
         val retrofit: Retrofit = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
@@ -29,13 +29,10 @@ class EarthquakeFetchr {
         eathquakHomePageRequest.enqueue(object : Callback<ErthResponse> {
             override fun onResponse(call: Call<ErthResponse>, response: Response<ErthResponse>) {
 
-              //  responseLiveData.value =
 
                 var erthResponse=response.body()
-            //  erthResponse?.erthR= emptyList()
                var eathquakes= erthResponse?.erthR
                    ?: mutableListOf()
-
                 responseLiveData.value=eathquakes
                 Log.d("test", response.body().toString())
 
