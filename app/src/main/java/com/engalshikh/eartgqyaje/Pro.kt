@@ -13,7 +13,7 @@ data class Pro(
     @SerializedName("place")
     var place:String="",
 
-//    var coordinates:Earthcoordinates
+
 
 ){
 }
