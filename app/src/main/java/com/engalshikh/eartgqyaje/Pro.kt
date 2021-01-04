@@ -3,7 +3,6 @@ package com.engalshikh.eartgqyaje
 import com.google.gson.annotations.SerializedName
 
 data class Pro(
-
     @SerializedName("mag")
     var mag: Double =0.0,
     @SerializedName("title")
@@ -12,8 +11,6 @@ data class Pro(
     var time:Long=3,
     @SerializedName("place")
     var place:String="",
-
-
 
 ){
 }

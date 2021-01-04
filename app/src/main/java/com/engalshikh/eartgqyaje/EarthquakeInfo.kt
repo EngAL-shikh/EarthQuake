@@ -133,6 +133,9 @@ class EarthquakeInfo : Fragment() {
 
 
     }
+
+
+
     inner class EarthquakeAdapter(var earthquakes: List<Earthquake>) :
         RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
